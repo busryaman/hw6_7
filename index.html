@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>To-Do List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <h1>Pixel Tasks</h1>
+      <p class="app-subtitle">
+        Küçük karelerde büyük planlar.
+      </p>
+      <p class="app-date-row">
+        <span class="app-date-label">Bugün:</span>
+        <span id="today-date" class="app-date-value"></span>
+      </p>
+    </header>
+
+    <main>
+      <section class="todo-container" aria-label="To-do list application">
+        <form id="todo-form" class="todo-form" aria-label="Add a new task">
+          <label class="visually-hidden" for="todo-input">Add a new task</label>
+          <input
+            type="text"
+            id="todo-input"
+            class="todo-input"
+            placeholder="What do you need to do?"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="todo-add-btn">Add</button>
+        </form>
+
+        <section aria-label="Task list">
+          <ul id="todo-list" class="todo-list"></ul>
+        </section>
+
+        <p id="empty-state" class="empty-state">No tasks yet. Add your first one!</p>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <small>Tasks are saved automatically in your browser.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
